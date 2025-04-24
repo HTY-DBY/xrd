@@ -12,21 +12,21 @@ The purpose of this user manual is to help users understand the basic functions,
 
 ## 3. ML code module
 
-The 'D_how_AE_PCE_do' module is used to compare the advantages and disadvantages of the AE algorithm and the PCA algorithm for the dimensionality reduction of XRD data.
+The `ML/D_how_AE_PCE_do` module is used to compare the advantages and disadvantages of the AE algorithm and the PCA algorithm for the dimensionality reduction of XRD data.
 
-The 'F_go_ZH' module generates XRD data based on the CIF file downloaded from the COD and predicts the degradation rate k of the trained model.
+The `ML/F_go_ZH` module generates XRD data based on the CIF file downloaded from the COD and predicts the degradation rate k of the trained model.
 
-The 'GA' module searches for the optimal solution of the input using the genetic algorithm GA.
+The `ML/GA` module searches for the optimal solution of the input using the genetic algorithm GA.
 
-The 'Hyper_parameters' module optimizes the hyperparameters of the model based on the optuna package.
+The `ML/Hyper_parameters` module optimizes the hyperparameters of the model based on the optuna package.
 
-The 'shap_get' module is used to obtain the shap analysis value of the model.
+The `ML/shap_get` module is used to obtain the shap analysis value of the model.
 
-The 'Z_model_creat' module includes self-made 1D CNN, Transformer, and autoencoder AE models, and model training can also load RF, XGB, and MLP models for comparative analysis.
+The `ML/Z_model_creat` module includes self-made 1D CNN, Transformer, and autoencoder AE models, and model training can also load RF, XGB, and MLP models for comparative analysis.
 
-The 'Other' module contains the cumbersome methods required by other modules.
+The `Other` module contains the cumbersome methods required by other modules.
 
-The 'Pretreatment' module contains the reading and pre-processing of XRD images or the reading of XRD data from pdf cards, the merging of XRD, molecular fingerprints and general degradation data (for ML training).
+The `Pretreatment` module contains the reading and pre-processing of XRD images or the reading of XRD data from pdf cards, the merging of XRD, molecular fingerprints and general degradation data (for ML training).
 
 ## 4. Web UI
 
@@ -34,14 +34,10 @@ The web UI is built on Gradio. In the parameter input window, sub-window 1 asks 
 
 ![img_2.png](README_img/img_2.png)
 
-In the model output window, click the RUN ML button to run the model and get the predicted degradation rate log2k and k. The Status sub-window displays the running status or error messages. real k (min⁻¹) -- The optional window is an optional input to enter the true k value of the experiment, in which case the relative error of k (%) automatically calculates the relative error (%) between the predicted value and the true value.
+In the model output window, click the RUN ML button to run the model and get the predicted degradation rate log2k and k. The Status sub-window displays the running status or error messages. The `real k (min⁻¹) -- The optional` window is an optional input to enter the true k value of the experiment, in which case `the relative error of k (%)` automatically calculates the relative error (%) between the predicted value and the true value.
 
 ![img_1.png](README_img/img_1.png)
 
 In addition, the Web UI provides an image display window that provides an image of the XRD spectral information and the degradation rate curve.
 
 ![img.png](README_img/img.png)
-
-## 5. Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=HTY-DBY/xrd&type=Date)](https://www.star-history.com/#HTY-DBY/xrd&Date)
